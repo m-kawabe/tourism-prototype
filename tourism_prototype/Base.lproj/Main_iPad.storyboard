@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Top View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45W-VE-74f">
+                                <rect key="frame" x="281" y="164" width="206" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gT-Q5-Gxh">
+                                <rect key="frame" x="275" y="488" width="218" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="マップからコースを探す">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KUQ-h5-a8U" kind="modal" id="830-Us-UfY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i04-V9-Wwd">
+                                <rect key="frame" x="275" y="619" width="218" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="特徴からコースを探す">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VVV-PS-MHJ" kind="modal" id="SRR-Bb-ZJE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5q-Vg-r2B">
+                                <rect key="frame" x="275" y="758" width="218" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="記録">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mQz-zf-jw8" kind="modal" id="SPq-hU-NLk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V5-yg-f3w">
+                                <rect key="frame" x="304" y="872" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="コース達成率">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pvk-Kn-dNK" kind="modal" id="NIy-fR-QU4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="1885"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="0iw-yn-n0p">
+            <objects>
+                <viewController id="KUQ-h5-a8U" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZeL-ug-EJa"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Bu-DJ-BHo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zZ2-v0-6jv">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ubD-6q-IFf">
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vu9-WZ-O90">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="地図" id="dW0-S4-vps">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="lP4-Hk-Iab">
+                                            <connections>
+                                                <action selector="dismissSelf:" destination="KUQ-h5-a8U" id="HIQ-cX-ECi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="ubD-6q-IFf" id="a5J-Wc-ci0"/>
+                        <segue destination="R1v-WC-8uQ" kind="modal" identifier="course" id="HqQ-t0-XMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gr-9v-DuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="-1670"/>
+        </scene>
+        <!--Course View Controller-->
+        <scene sceneID="k0f-Ap-xbf">
+            <objects>
+                <viewController id="R1v-WC-8uQ" customClass="CourseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gOJ-FW-d2b"/>
+                        <viewControllerLayoutGuide type="bottom" id="IeL-rf-DV1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mjy-f1-pIl">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-xJ-Qx4">
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goryokaku_park.png" id="szj-S0-U3V">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="377"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVh-8N-Lsh">
+                                <rect key="frame" x="651" y="194" width="98" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="triangle_right.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButton:" destination="R1v-WC-8uQ" eventType="touchUpInside" id="CrB-VQ-fDI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCC-fW-Umw">
+                                <rect key="frame" x="20" y="194" width="98" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="triangle_left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButton:" destination="R1v-WC-8uQ" eventType="touchUpInside" id="qvh-dc-s3O"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-E9-JXy">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="五稜郭・梁川コース" id="C39-A6-CUp">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="mDE-C3-3wR">
+                                            <connections>
+                                                <action selector="dismissSelf:" destination="dAb-Qc-bg8" id="3Ps-dO-j5B"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="szj-S0-U3V" id="FdO-eC-rSr"/>
+                        <outlet property="myTableView" destination="yNE-xJ-Qx4" id="lsF-69-PSw"/>
+                        <segue destination="hRJ-oT-8sA" kind="modal" identifier="course_map" id="JTY-x0-S30"/>
+                        <segue destination="78m-pm-oaf" kind="modal" identifier="web" id="PLS-7y-Jjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAb-Qc-bg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3296" y="-1670"/>
+        </scene>
+        <!--Health Walking Map View Controller-->
+        <scene sceneID="CkX-W1-adH">
+            <objects>
+                <viewController id="78m-pm-oaf" customClass="HealthWalkingMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="slb-Mf-4Nh"/>
+                        <viewControllerLayoutGuide type="bottom" id="4q8-OP-9pu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqw-FV-qAc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upT-xD-DOY">
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dr5-w5-f3y">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="N1w-8c-c1N">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="tya-30-Jxa">
+                                            <connections>
+                                                <action selector="dismissSelf:" destination="fDf-T8-2bI" id="lV6-GU-nh8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="upT-xD-DOY" id="gVO-fA-nrg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDf-T8-2bI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4761" y="-1670"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J1w-y3-Rn5">
+            <objects>
+                <viewController id="VVV-PS-MHJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oxc-jO-4Py"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pdl-KD-1IF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fb5-xh-TRe">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hls-z0-m5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="1885"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="cIO-W9-UOE">
+            <objects>
+                <viewController id="mQz-zf-jw8" customClass="LogViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cw3-x8-PLE"/>
+                        <viewControllerLayoutGuide type="bottom" id="oZG-oU-Rtb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xc2-zp-Cws">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dd-g5-gVz">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="vQ4-O0-esT">
+                                        <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="XDH-ZA-qYb">
+                                            <connections>
+                                                <action selector="dismissSelf:" destination="lv6-ec-0P0" id="5pF-aL-hQf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="AxX-pa-HyX">
+                                            <rect key="frame" x="135" y="8" width="499" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="消費カロリー"/>
+                                                <segment title="移動距離"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="log_graph.png" translatesAutoresizingMaskIntoConstraints="NO" id="VU7-oz-YaO">
+                                <rect key="frame" x="-7" y="44" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lv6-ec-0P0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="3685"/>
+        </scene>
+        <!--Achivement View Controller-->
+        <scene sceneID="Glm-c2-EnF">
+            <objects>
+                <viewController id="pvk-Kn-dNK" customClass="AchivementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ulo-Vk-59v"/>
+                        <viewControllerLayoutGuide type="bottom" id="mLU-Kf-5nA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tMJ-jC-Edq">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmK-No-GgB">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="コース達成率" id="t0t-0G-8Sv">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="hcp-qi-zuf">
+                                            <connections>
+                                                <action selector="dismissSelf:" destination="CQ7-Yl-t9E" id="x2N-Ik-Fj3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQ7-Yl-t9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="5493"/>
+        </scene>
+        <!--Course Map View Controller-->
+        <scene sceneID="gpG-K2-egG">
+            <objects>
+                <viewController id="hRJ-oT-8sA" customClass="CourseMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cn9-ec-MIG"/>
+                        <viewControllerLayoutGuide type="bottom" id="yPF-QB-mhU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b0f-gV-3XG">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eab-2x-BTW">
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4W-Ul-w96">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="五稜郭・梁川コース" id="Tpj-P6-2Sy">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="hkX-ok-Shg">
+                                            <connections>
+                                                <action selector="dismissSelf:" destination="sMQ-ir-3RT" id="JNI-HT-TjT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMQ-ir-3RT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3296" y="-67"/>
+        </scene>
+        <!--Spot View Controller-->
+        <scene sceneID="One-xC-CSl">
+            <objects>
+                <viewController id="oPr-SQ-W6c" customClass="SpotViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uab-xw-H1u"/>
+                        <viewControllerLayoutGuide type="bottom" id="juu-ou-rJn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hnv-HN-tYc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-TR-Sma">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Iq9-Nx-4pg">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="429"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PU-jf-bL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4761" y="-67"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goryokaku_park.png" width="398" height="259"/>
+        <image name="log_graph.png" width="551" height="693"/>
+        <image name="triangle_left.png" width="124" height="127"/>
+        <image name="triangle_right.png" width="127" height="127"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
